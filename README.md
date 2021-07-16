@@ -1,7 +1,9 @@
-# tsflex feature-extraction benchmark code-base
+# tsflex - feature-extraction benchmarking
 
 ## <p align="center"> <a href="https://predict-idlab.github.io/tsflex/#benchmark"><img alt="tsflex" src="https://raw.githubusercontent.com/predict-idlab/tsflex/main/docs/_static/logo.png" height="100"></a></p>
 
+![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?color=black)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?)](http://makeapullrequest.com) 
 
 This repository withholds the [benchmark results](https://predict-idlab.github.io/tsflex/#benchmark) and visualization code of the `tsflex` paper and [toolkit](https://github.com/predict-idlab/tsflex).
 
@@ -32,8 +34,8 @@ pip install -r requirements.txt
 If you want to **re-run the benchmarks**, use the [run_scripts](code/run_scripts.ipynb) notebook to generate new benchmark JSONs and then visualize them with the [benchmark visualization](code/benchmark_visualizations.ipynb) notebook.
 
 
-> We are open to new-benchmark use-cases via pull-requests!<br>
-> e.g. different sample rates, other feature extraction functions, other data properties
+> We are open to new-benchmark use-cases via **pull-requests**!<br>
+> Examples of other interesting benchmarks are different sample rates, other feature extraction functions, other data properties, ...
 
 
 ## Referencing our package
