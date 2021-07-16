@@ -1,4 +1,4 @@
-# Tsflex feature-extraction benchmark code-base
+# tsflex feature-extraction benchmark code-base
 
 ## <p align="center"> <a href="https://predict-idlab.github.io/tsflex/#benchmark"><img alt="tsflex" src="https://raw.githubusercontent.com/predict-idlab/tsflex/main/docs/_static/logo.png" height="100"></a></p>
 
@@ -9,10 +9,10 @@ This repository withholds the [benchmark results](https://predict-idlab.github.i
 
 The benchmark process follows these steps for each feature-extraction configuration:
 
-1. The corresponding feature-extraction Python script is called. This is done 20 times to average out the memory usage and create upper memory bounds.\footnote{Remark that by (re)calling the script sequentially, no caching or memory is shared among the separate script-executions.}
+1. The corresponding feature-extraction Python script is called. This is done 20 times to average out the memory usage and create upper memory bounds. Remark that by (re)calling the script sequentially, no caching or memory is shared among the separate script-executions.
 2. In this script:
    1. Load the data and store as a [pd.DataFrame](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html)
-   2. [VizTracer][https://github.com/gaogaotiantian/viztracer] starts logging
+   2. [VizTracer](https://github.com/gaogaotiantian/viztracer) starts logging
    3. Create the feature extraction configuration
    4. Extract & store the features
    5. VizTracer stops logging
@@ -51,9 +51,7 @@ If you use `tsflex` in a scientific publication, we would highly appreciate citi
 }
 ```
 
-
 ---
-
 <p align="center">
 👤 <i>Jonas Van Der Donckt, Jeroen Van Der Donckt</i>
 </p>
