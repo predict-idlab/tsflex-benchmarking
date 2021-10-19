@@ -4,7 +4,7 @@ scipy==1.6.3
 
 
 tsfel==0.1.4
-tsflex==0.1.1.8
+tsflex==0.1.2.3
 tsfresh==0.18.0
 seglearn==1.2.3
 
@@ -13,4 +13,4 @@ viztracer==0.13.4
 
 plotly==4.14.3
 tqdm==4.61.2
-jupyter
+jupyterlab

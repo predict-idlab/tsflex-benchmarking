@@ -7,7 +7,7 @@ from viztracer import VizTracer
 from utils import get_data
 
 # load our library
-from tsflex.features import FeatureCollection, NumpyFuncWrapper
+from tsflex.features import FeatureCollection, FuncWrapper
 from tsflex.features import MultipleFeatureDescriptors
 
 def str2bool(v):
@@ -49,7 +49,7 @@ def slope(x):
     return np.polyfit(np.arange(0, len(x)), x, 1)[0]
 
 
-f_slope = NumpyFuncWrapper(type_wrapper, output_names="slope", type_wrapped_func=slope)
+f_slope = FuncWrapper(type_wrapper, output_names="slope", type_wrapped_func=slope)
 
 
 # -- 3. Lambda's
@@ -57,8 +57,8 @@ f_slope = NumpyFuncWrapper(type_wrapper, output_names="slope", type_wrapped_func
 def rms(x): return np.sqrt(np.mean(x ** 2))
 
 
-f_rms = NumpyFuncWrapper(rms, output_names="rms")
-f_area = NumpyFuncWrapper(np.sum, output_names="area")
+f_rms = FuncWrapper(rms, output_names="rms")
+f_area = FuncWrapper(np.sum, output_names="area")
 
 # (For convenience) we store the constructed `NumpyFuncWrappers` in a list
 segment_funcs = [
