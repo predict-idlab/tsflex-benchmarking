@@ -20,8 +20,7 @@ The benchmark process follows these steps for each feature-extraction configurat
    5. VizTracer stops logging
    6. Write the VizTracer results to a JSON-file
 
-The existing [benchmark JSONS](code/benchmark_jsons/) were collected on a desktop with an *Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz* CPU and *SAMSUNG M393B1G73QH0-CMA DDR3 1600MT/s* RAM, with *Ubuntu 18.04.5 LTS x86\_64* as operating system.
-
+The existing [benchmark JSONS](code/benchmark_jsons/) were collected on a desktop with an *Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz* CPU and *SAMSUNG M393B1G73QH0-CMA DDR3 1600MT/s* RAM, with *Ubuntu 18.04.5 LTS x86\_64* as operating system. Other running processes were limited to a minimum.
 
 ## Instructions
 
