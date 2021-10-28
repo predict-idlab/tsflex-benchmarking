@@ -46,7 +46,7 @@ def type_wrapper(x: np.ndarray, type_wrapped_func, **kwargs):
 # -- 2. in-line functions
 #    You can define your functions locally; these will serialize flawlessly
 def slope(x):
-    return np.polyfit(np.arange(0, len(x)), x, 1)[0]
+    return ss.linregress(np.arange(0, len(x)), x)[0]
 
 
 f_slope = FuncWrapper(type_wrapper, output_names="slope", type_wrapped_func=slope)
