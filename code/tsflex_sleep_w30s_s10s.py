@@ -7,6 +7,8 @@ from viztracer import VizTracer
 from utils import get_data
 
 # load our library
+# import sys
+# sys.path.append('/users/jonvdrdo/jonas/projects/time_series')
 from tsflex.features import FeatureCollection, FuncWrapper
 from tsflex.features import MultipleFeatureDescriptors
 
@@ -76,7 +78,7 @@ segment_funcs = [
 
 # -------------- get the data
 df_emg = get_data()
-windows_s = ['20s', '30s', '60s', '90s']
+windows_s = ['30s', '60s', '90s']
 
 # ----------------------------------------------------------------------------
 if args.multiprocessing:
