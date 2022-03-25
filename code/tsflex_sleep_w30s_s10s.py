@@ -38,7 +38,7 @@ args = parser.parse_args()
 print(args)
 
 # ----------------------------------------------------------------------------
-quantiles = [0.25, 0.5, 0.75]
+# quantiles = [0.25, 0.5, 0.75]
 
 
 def type_wrapper(x: np.ndarray, type_wrapped_func, **kwargs):
@@ -58,22 +58,30 @@ f_slope = FuncWrapper(type_wrapper, output_names="slope", type_wrapped_func=slop
 #    Or even use lambda's and other modules' functions
 def rms(x): return np.sqrt(np.mean(x ** 2))
 
+def std_var(x):
+    var = np.var(x)
+    return np.sqrt(var), var
+
+def sum_mean(x):
+    s = np.sum(x)
+    return s, s / len(x)
+
 
 f_rms = FuncWrapper(rms, output_names="rms")
-f_area = FuncWrapper(np.sum, output_names="area")
+# More computationally efficient as you can reuse already calculated values
+f_std_var = FuncWrapper(std_var, output_names=["std", "var"])
+f_sum_mean = FuncWrapper(sum_mean, output_names=["area", "mean"])
 
 # (For convenience) we store the constructed `NumpyFuncWrappers` in a list
 segment_funcs = [
     np.min,
     np.max,
-    np.mean,
-    np.std,
-    np.var,
+    f_std_var,
+    f_sum_mean,
     ss.skew,
     ss.kurtosis,
     f_slope,
     f_rms,
-    f_area,
 ]
 
 # -------------- get the data
